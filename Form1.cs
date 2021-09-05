@@ -14,8 +14,9 @@ namespace XanderToolz
     {
         Double resultsValue = 0;
         String OperatorType = "";
-        bool isOperatorType = false;
         String Tip = "";
+        bool isOperatorType = false;
+        bool isEqualPerformed = false;
         Double tip15 = 0.15;
         Double tip18 = 0.18;
         Double tip20 = 0.20;
@@ -31,17 +32,26 @@ namespace XanderToolz
 
         private void buttonDown(object sender, EventArgs e)
         {
+
+
             if ((resultBox.Text == "0") || (isOperatorType))
                 resultBox.Clear();
             isOperatorType = false;
             Button button = (Button)sender;
+
+            if (isEqualPerformed == true) // Attempt to clear out Display and Results after Equal Button is pressed
+            {
+                resultBox.Clear();
+                DisplayOperation.Text = "";
+                resultsValue = 0;
+                isEqualPerformed = false;
+            }
             if (button.Text == ".")
             {
                 if (!resultBox.Text.Contains("."))
                     resultBox.Text = resultBox.Text + button.Text;
             }
             else
-
                 resultBox.Text = resultBox.Text + button.Text;
 
         }
@@ -51,7 +61,8 @@ namespace XanderToolz
             Button button = (Button)sender;
             if (resultsValue != 0)
             {
-                button10.PerformClick(); // Performs the Equal Method   
+                //button10.PerformClick(); // Performs the Equal Method   
+                MathEquation();
                 OperatorType = button.Text;
                 DisplayOperation.Text = resultsValue + " " + OperatorType;
                 isOperatorType = true;
@@ -66,6 +77,19 @@ namespace XanderToolz
         }
 
         private void Equal(object sender, EventArgs e)
+        {
+            MathEquation();
+            DisplayOperation.Text = "";
+            isEqualPerformed = true; 
+
+            //if (button10.Text == "=")
+            //{
+            //    isEqualPerformed = true; // Need to turn on when Equal Button is pressed down     
+            //}
+
+        }
+
+        private void MathEquation()
         {
             switch (OperatorType)
             {
@@ -85,9 +109,8 @@ namespace XanderToolz
                     break;
             }
             resultsValue = Double.Parse(resultBox.Text);
-            DisplayOperation.Text = resultsValue + " " + OperatorType;
+            
         }
-
         private void ClearDisplay(object sender, EventArgs e)
         {
             resultBox.Text = "0";
@@ -112,7 +135,7 @@ namespace XanderToolz
                 {
                     case "15%":                                      
                         resultBox.Text = (resultsValue * tip15).ToString();
-                    TotalTip.Text = (resultsValue * totalTip15).ToString(format: "0.##");
+                        TotalTip.Text = (resultsValue * totalTip15).ToString(format: "0.##");
                     break;
                     case "18%":
                         resultBox.Text = (resultsValue * tip18).ToString();

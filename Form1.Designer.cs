@@ -326,7 +326,7 @@ namespace XanderToolz
             // 
             this.TotalTip.AutoSize = true;
             this.TotalTip.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TotalTip.Location = new System.Drawing.Point(237, 451);
+            this.TotalTip.Location = new System.Drawing.Point(274, 451);
             this.TotalTip.Name = "TotalTip";
             this.TotalTip.Size = new System.Drawing.Size(0, 32);
             this.TotalTip.TabIndex = 24;
@@ -334,7 +334,7 @@ namespace XanderToolz
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 484);
+            this.label2.Location = new System.Drawing.Point(274, 484);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 25;
@@ -344,7 +344,7 @@ namespace XanderToolz
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(211, 451);
+            this.label3.Location = new System.Drawing.Point(227, 451);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 32);
             this.label3.TabIndex = 26;
