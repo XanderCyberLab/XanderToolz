@@ -50,6 +50,10 @@ namespace XanderToolz
             this.button18 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DisplayOperation = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.TotalTip = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -278,15 +282,61 @@ namespace XanderToolz
             this.DisplayOperation.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DisplayOperation.Location = new System.Drawing.Point(12, 32);
             this.DisplayOperation.Name = "DisplayOperation";
-            this.DisplayOperation.Size = new System.Drawing.Size(104, 37);
+            this.DisplayOperation.Size = new System.Drawing.Size(0, 37);
             this.DisplayOperation.TabIndex = 20;
-            this.DisplayOperation.Text = "Display";
+            // 
+            // button19
+            // 
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button19.Location = new System.Drawing.Point(12, 422);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(60, 60);
+            this.button19.TabIndex = 21;
+            this.button19.Text = "15%";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.TipCal);
+            // 
+            // button20
+            // 
+            this.button20.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button20.Location = new System.Drawing.Point(144, 422);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(60, 60);
+            this.button20.TabIndex = 22;
+            this.button20.Text = "20%";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.TipCal);
+            // 
+            // button21
+            // 
+            this.button21.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button21.Location = new System.Drawing.Point(78, 422);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(60, 60);
+            this.button21.TabIndex = 23;
+            this.button21.Text = "18%";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.TipCal);
+            // 
+            // TotalTip
+            // 
+            this.TotalTip.AutoSize = true;
+            this.TotalTip.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalTip.Location = new System.Drawing.Point(227, 434);
+            this.TotalTip.Name = "TotalTip";
+            this.TotalTip.Size = new System.Drawing.Size(105, 32);
+            this.TotalTip.TabIndex = 24;
+            this.TotalTip.Text = "Total Tip";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 562);
+            this.Controls.Add(this.TotalTip);
+            this.Controls.Add(this.button21);
+            this.Controls.Add(this.button20);
+            this.Controls.Add(this.button19);
             this.Controls.Add(this.DisplayOperation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button18);
@@ -339,6 +389,10 @@ namespace XanderToolz
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label DisplayOperation;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Label TotalTip;
     }
 }
 
