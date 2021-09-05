@@ -54,6 +54,9 @@ namespace XanderToolz
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.TotalTip = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -270,6 +273,7 @@ namespace XanderToolz
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(211, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 22);
@@ -288,7 +292,7 @@ namespace XanderToolz
             // button19
             // 
             this.button19.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button19.Location = new System.Drawing.Point(12, 422);
+            this.button19.Location = new System.Drawing.Point(12, 439);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(60, 60);
             this.button19.TabIndex = 21;
@@ -299,7 +303,7 @@ namespace XanderToolz
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button20.Location = new System.Drawing.Point(144, 422);
+            this.button20.Location = new System.Drawing.Point(144, 439);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(60, 60);
             this.button20.TabIndex = 22;
@@ -310,7 +314,7 @@ namespace XanderToolz
             // button21
             // 
             this.button21.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button21.Location = new System.Drawing.Point(78, 422);
+            this.button21.Location = new System.Drawing.Point(78, 439);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(60, 60);
             this.button21.TabIndex = 23;
@@ -322,17 +326,47 @@ namespace XanderToolz
             // 
             this.TotalTip.AutoSize = true;
             this.TotalTip.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TotalTip.Location = new System.Drawing.Point(227, 434);
+            this.TotalTip.Location = new System.Drawing.Point(237, 451);
             this.TotalTip.Name = "TotalTip";
-            this.TotalTip.Size = new System.Drawing.Size(105, 32);
+            this.TotalTip.Size = new System.Drawing.Size(0, 32);
             this.TotalTip.TabIndex = 24;
-            this.TotalTip.Text = "Total Tip";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(237, 484);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Total Amount";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(211, 451);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 32);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "$";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 421);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 15);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Tip Calculator";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 562);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalTip);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
@@ -393,6 +427,9 @@ namespace XanderToolz
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Label TotalTip;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
