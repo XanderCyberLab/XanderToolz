@@ -59,7 +59,7 @@ namespace XanderToolz
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Calculator = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Calculator2 = new System.Windows.Forms.TabPage();
             this.button22 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button23 = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@ namespace XanderToolz
             this.button24 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.TotalTip2 = new System.Windows.Forms.Label();
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
@@ -88,9 +88,21 @@ namespace XanderToolz
             this.button40 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
+            this.ManufacturingCalc = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.JOQTY = new System.Windows.Forms.TextBox();
+            this.Converter = new System.Windows.Forms.TabPage();
+            this.button44 = new System.Windows.Forms.Button();
+            this.button45 = new System.Windows.Forms.Button();
+            this.button46 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Calculator.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Calculator2.SuspendLayout();
+            this.ManufacturingCalc.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -308,7 +320,7 @@ namespace XanderToolz
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(207, 0);
+            this.label1.Location = new System.Drawing.Point(213, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 22);
             this.label1.TabIndex = 19;
@@ -396,7 +408,9 @@ namespace XanderToolz
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Calculator);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.Calculator2);
+            this.tabControl1.Controls.Add(this.ManufacturingCalc);
+            this.tabControl1.Controls.Add(this.Converter);
             this.tabControl1.Location = new System.Drawing.Point(-5, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -439,45 +453,45 @@ namespace XanderToolz
             this.Calculator.Padding = new System.Windows.Forms.Padding(3);
             this.Calculator.Size = new System.Drawing.Size(367, 517);
             this.Calculator.TabIndex = 0;
-            this.Calculator.Text = "tabPage1";
+            this.Calculator.Text = "Calc-1";
             // 
-            // tabPage2
+            // Calculator2
             // 
-            this.tabPage2.Controls.Add(this.button22);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.button23);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.button24);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.button25);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.button26);
-            this.tabPage2.Controls.Add(this.button27);
-            this.tabPage2.Controls.Add(this.button28);
-            this.tabPage2.Controls.Add(this.button29);
-            this.tabPage2.Controls.Add(this.button30);
-            this.tabPage2.Controls.Add(this.button31);
-            this.tabPage2.Controls.Add(this.button32);
-            this.tabPage2.Controls.Add(this.DisplayOperation2);
-            this.tabPage2.Controls.Add(this.button33);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.button34);
-            this.tabPage2.Controls.Add(this.button35);
-            this.tabPage2.Controls.Add(this.button36);
-            this.tabPage2.Controls.Add(this.button37);
-            this.tabPage2.Controls.Add(this.button38);
-            this.tabPage2.Controls.Add(this.button39);
-            this.tabPage2.Controls.Add(this.resultBox2);
-            this.tabPage2.Controls.Add(this.button40);
-            this.tabPage2.Controls.Add(this.button41);
-            this.tabPage2.Controls.Add(this.button42);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(367, 517);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Calculator2.Controls.Add(this.button22);
+            this.Calculator2.Controls.Add(this.label5);
+            this.Calculator2.Controls.Add(this.button23);
+            this.Calculator2.Controls.Add(this.label6);
+            this.Calculator2.Controls.Add(this.button24);
+            this.Calculator2.Controls.Add(this.label7);
+            this.Calculator2.Controls.Add(this.button25);
+            this.Calculator2.Controls.Add(this.TotalTip2);
+            this.Calculator2.Controls.Add(this.button26);
+            this.Calculator2.Controls.Add(this.button27);
+            this.Calculator2.Controls.Add(this.button28);
+            this.Calculator2.Controls.Add(this.button29);
+            this.Calculator2.Controls.Add(this.button30);
+            this.Calculator2.Controls.Add(this.button31);
+            this.Calculator2.Controls.Add(this.button32);
+            this.Calculator2.Controls.Add(this.DisplayOperation2);
+            this.Calculator2.Controls.Add(this.button33);
+            this.Calculator2.Controls.Add(this.label10);
+            this.Calculator2.Controls.Add(this.button34);
+            this.Calculator2.Controls.Add(this.button35);
+            this.Calculator2.Controls.Add(this.button36);
+            this.Calculator2.Controls.Add(this.button37);
+            this.Calculator2.Controls.Add(this.button38);
+            this.Calculator2.Controls.Add(this.button39);
+            this.Calculator2.Controls.Add(this.resultBox2);
+            this.Calculator2.Controls.Add(this.button40);
+            this.Calculator2.Controls.Add(this.button41);
+            this.Calculator2.Controls.Add(this.button42);
+            this.Calculator2.Location = new System.Drawing.Point(4, 24);
+            this.Calculator2.Name = "Calculator2";
+            this.Calculator2.Padding = new System.Windows.Forms.Padding(3);
+            this.Calculator2.Size = new System.Drawing.Size(367, 517);
+            this.Calculator2.TabIndex = 1;
+            this.Calculator2.Text = "Calc-2";
+            this.Calculator2.UseVisualStyleBackColor = true;
             // 
             // button22
             // 
@@ -551,14 +565,14 @@ namespace XanderToolz
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.buttonDown2);
             // 
-            // label8
+            // TotalTip2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(275, 455);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 32);
-            this.label8.TabIndex = 52;
+            this.TotalTip2.AutoSize = true;
+            this.TotalTip2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalTip2.Location = new System.Drawing.Point(275, 455);
+            this.TotalTip2.Name = "TotalTip2";
+            this.TotalTip2.Size = new System.Drawing.Size(0, 32);
+            this.TotalTip2.TabIndex = 52;
             // 
             // button26
             // 
@@ -776,6 +790,111 @@ namespace XanderToolz
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.Operator2);
             // 
+            // ManufacturingCalc
+            // 
+            this.ManufacturingCalc.Controls.Add(this.label11);
+            this.ManufacturingCalc.Controls.Add(this.label9);
+            this.ManufacturingCalc.Controls.Add(this.label8);
+            this.ManufacturingCalc.Controls.Add(this.button46);
+            this.ManufacturingCalc.Controls.Add(this.button45);
+            this.ManufacturingCalc.Controls.Add(this.button44);
+            this.ManufacturingCalc.Controls.Add(this.textBox2);
+            this.ManufacturingCalc.Controls.Add(this.textBox1);
+            this.ManufacturingCalc.Controls.Add(this.JOQTY);
+            this.ManufacturingCalc.Location = new System.Drawing.Point(4, 24);
+            this.ManufacturingCalc.Name = "ManufacturingCalc";
+            this.ManufacturingCalc.Size = new System.Drawing.Size(367, 517);
+            this.ManufacturingCalc.TabIndex = 2;
+            this.ManufacturingCalc.Text = "Mfn";
+            this.ManufacturingCalc.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(238, 95);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(101, 95);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 4;
+            // 
+            // JOQTY
+            // 
+            this.JOQTY.Location = new System.Drawing.Point(13, 57);
+            this.JOQTY.Name = "JOQTY";
+            this.JOQTY.Size = new System.Drawing.Size(72, 23);
+            this.JOQTY.TabIndex = 0;
+            // 
+            // Converter
+            // 
+            this.Converter.Location = new System.Drawing.Point(4, 24);
+            this.Converter.Name = "Converter";
+            this.Converter.Size = new System.Drawing.Size(367, 517);
+            this.Converter.TabIndex = 3;
+            this.Converter.Text = "Converter";
+            this.Converter.UseVisualStyleBackColor = true;
+            // 
+            // button44
+            // 
+            this.button44.Location = new System.Drawing.Point(101, 57);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(75, 23);
+            this.button44.TabIndex = 7;
+            this.button44.Text = "Finish";
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.SampleType);
+            // 
+            // button45
+            // 
+            this.button45.Location = new System.Drawing.Point(182, 57);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(75, 23);
+            this.button45.TabIndex = 8;
+            this.button45.Text = "Semi";
+            this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.SampleType);
+            // 
+            // button46
+            // 
+            this.button46.Location = new System.Drawing.Point(263, 57);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(75, 23);
+            this.button46.TabIndex = 9;
+            this.button46.Text = "Raw";
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.SampleType);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 15);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Job Qty";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(101, 125);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 15);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Total Pcs to Inspect";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(238, 125);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 15);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Every (x) Inspect";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -788,8 +907,10 @@ namespace XanderToolz
             this.tabControl1.ResumeLayout(false);
             this.Calculator.ResumeLayout(false);
             this.Calculator.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Calculator2.ResumeLayout(false);
+            this.Calculator2.PerformLayout();
+            this.ManufacturingCalc.ResumeLayout(false);
+            this.ManufacturingCalc.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -826,7 +947,7 @@ namespace XanderToolz
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Calculator;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Calculator2;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button23;
@@ -834,7 +955,7 @@ namespace XanderToolz
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label TotalTip2;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
@@ -855,6 +976,17 @@ namespace XanderToolz
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.TabPage ManufacturingCalc;
+        private System.Windows.Forms.TabPage Converter;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox JOQTY;
+        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.Button button45;
+        private System.Windows.Forms.Button button44;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
 

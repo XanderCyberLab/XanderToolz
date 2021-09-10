@@ -17,6 +17,11 @@ namespace XanderToolz
         String Tip = "";
         bool isOperatorType = false;
         bool isEqualPerformed = false;
+        Double resultsValue2 = 0;
+        String OperatorType2 = "";
+        String Tip2 = "";
+        bool isOperatorType2 = false;
+        bool isEqualPerformed2 = false;
         Double tip15 = 0.15;
         Double tip18 = 0.18;
         Double tip20 = 0.20;
@@ -149,24 +154,26 @@ namespace XanderToolz
                         break;
                 }
         }
-        //////////////////
-        ///Calculator 2///
-        //////////////////
+        /// <summary>
+        /// Tab 2-Second Calculator
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void buttonDown2(object sender, EventArgs e)
         {
 
-            if ((resultBox2.Text == "0") || (isOperatorType))
+            if ((resultBox2.Text == "0") || (isOperatorType2))
                 resultBox2.Clear();
-            isOperatorType = false;
+            isOperatorType2 = false;
             Button button = (Button)sender;
 
-            if (isEqualPerformed == true) // Attempt to clear out Display and Results after Equal Button is pressed
+            if (isEqualPerformed2 == true) // Attempt to clear out Display and Results after Equal Button is pressed
             {
                 resultBox2.Clear();
                 DisplayOperation2.Text = "";
-                resultsValue = 0;
-                isEqualPerformed = false;
+                resultsValue2 = 0;
+                isEqualPerformed2 = false;
             }
             if (button.Text == ".")
             {
@@ -181,59 +188,95 @@ namespace XanderToolz
         private void Operator2(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            if (resultsValue != 0)
+            if (resultsValue2 != 0)
             {
                 //button10.PerformClick(); // Performs the Equal Method   
-                MathEquation();
-                OperatorType = button.Text;
-                DisplayOperation2.Text = resultsValue + " " + OperatorType;
-                isOperatorType = true;
+                MathEquation2();
+                OperatorType2 = button.Text;
+                DisplayOperation2.Text = resultsValue2 + " " + OperatorType2;
+                isOperatorType2 = true;
             }
             else
             {
-                OperatorType = button.Text;
-                resultsValue = Double.Parse(resultBox.Text);
-                DisplayOperation2.Text = resultsValue + " " + OperatorType;
-                isOperatorType = true;
+                OperatorType2 = button.Text;
+                resultsValue2 = Double.Parse(resultBox2.Text);
+                DisplayOperation2.Text = resultsValue2 + " " + OperatorType2;
+                isOperatorType2 = true;
             }
         }
 
         private void Equal2(object sender, EventArgs e)
         {
-            MathEquation();
+            MathEquation2();
             DisplayOperation2.Text = "";
-            isEqualPerformed = true;
-
-            //if (button10.Text == "=")
-            //{
-            //    isEqualPerformed = true; // Need to turn on when Equal Button is pressed down     
-            //}
-
+            isEqualPerformed2 = true;
         }
 
-       private void TipCal2(object sender, EventArgs e)
+        private void MathEquation2()
         {
-            Button button = (Button)sender;
-            Tip = button.Text;
-            resultsValue = Double.Parse(resultBox.Text);
-
-            switch (Tip)
+            switch (OperatorType2)
             {
-                case "15%":
-                    resultBox2.Text = (resultsValue * tip15).ToString();
-                    TotalTip.Text = (resultsValue * totalTip15).ToString(format: "0.##");
+                case "+":
+                    resultBox2.Text = (resultsValue2 + Double.Parse(resultBox2.Text)).ToString();
                     break;
-                case "18%":
-                    resultBox2.Text = (resultsValue * tip18).ToString();
-                    TotalTip.Text = (resultsValue * totalTip18).ToString(format: "0.##");
+                case "-":
+                    resultBox2.Text = (resultsValue2 - Double.Parse(resultBox2.Text)).ToString();
                     break;
-                case "20%":
-                    resultBox2.Text = (resultsValue * tip20).ToString();
-                    TotalTip.Text = (resultsValue * totalTip20).ToString(format: "0.##");
+                case "x":
+                    resultBox2.Text = (resultsValue2 * Double.Parse(resultBox2.Text)).ToString();
+                    break;
+                case "/":
+                    resultBox2.Text = (resultsValue2 / Double.Parse(resultBox2.Text)).ToString();
                     break;
                 default:
                     break;
             }
+            resultsValue2 = Double.Parse(resultBox2.Text);
+        }
+            private void TipCal2(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Tip2 = button.Text;
+            resultsValue2 = Double.Parse(resultBox2.Text);
+
+
+            switch (Tip2)
+            {
+                case "15%":
+                    resultBox2.Text = (resultsValue2 * tip15).ToString();
+                    TotalTip2.Text = (resultsValue2 * totalTip15).ToString(format: "0.##");
+                    break;
+                case "18%":
+                    resultBox2.Text = (resultsValue2 * tip18).ToString();
+                    TotalTip2.Text = (resultsValue2 * totalTip18).ToString(format: "0.##");
+                    break;
+                case "20%":
+                    resultBox2.Text = (resultsValue2 * tip20).ToString();
+                    TotalTip2.Text = (resultsValue2 * totalTip20).ToString(format: "0.##");
+                    break;
+                default:
+                    break;
+            }
+        }
+        /// <summary>
+        /// Tab 3 - Manufacturing Calculations
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        Double jobQty;
+        Double finishBlank = 0.40;
+        Double SemiBlank = 1.5;
+        Double RawBlank = 4.0;
+
+        private void samplingEquation()
+        {
+            jobQty = Double.Parse(JOQTY.Text);
+        }
+
+        private void SampleType(object sender, EventArgs e)
+        {
+
         }
     }
 }
