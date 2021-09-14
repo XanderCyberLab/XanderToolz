@@ -13,21 +13,18 @@ namespace XanderToolz
     public partial class Form1 : Form
     {
         Double resultsValue = 0;
+        Double tip15 = 0.15, tip18 = 0.18, tip20 = 0.20;
+        Double totalTip15 = 1.15, totalTip18 = 1.18, totalTip20 = 1.20;
+        Double resultsValue2 = 0;
         String OperatorType = "";
         String Tip = "";
-        bool isOperatorType = false;
-        bool isEqualPerformed = false;
-        Double resultsValue2 = 0;
         String OperatorType2 = "";
         String Tip2 = "";
         bool isOperatorType2 = false;
         bool isEqualPerformed2 = false;
-        Double tip15 = 0.15;
-        Double tip18 = 0.18;
-        Double tip20 = 0.20;
-        Double totalTip15 = 1.15;
-        Double totalTip18 = 1.18;
-        Double totalTip20 = 1.20;
+        bool isOperatorType = false;
+        bool isEqualPerformed = false;
+
         
         public Form1()
         {
@@ -264,19 +261,13 @@ namespace XanderToolz
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
-
-        //private void InspectionCalculate()
-        //{
-        //    double pcCalculate;
-        //everyPC = Double.Parse(inspectAmount.Text);
-        //pcCalculate = jobQty / everyPC;
-        //everyxpcs.Text = pcCalculate.ToString();
-        //}
         int jobQty;
         int everyPC;
         int pcCalculate;
         private void finishButton(object sender, EventArgs e)
         {
+
+
             jobQty = Int32.Parse(JOQTY.Text);
             
             if (jobQty < 26)
@@ -441,5 +432,16 @@ namespace XanderToolz
                 everyxpcs.Text = pcCalculate.ToString();
             }
         }
+
+
+        private void degCalculation(object sender, EventArgs e)
+        {
+            double angle = Double.Parse(degrees.Text);
+            double angleMinutes = Double.Parse(minutes.Text);
+            double angleSeconds = Double.Parse(seconds.Text);
+            Double degCalx = angle + (angleMinutes / 60) + (angleSeconds / 3600);
+            degAnswer.Text = degCalx.ToString();
+        }
+
     }
 }

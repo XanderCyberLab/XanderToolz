@@ -99,6 +99,14 @@ namespace XanderToolz
             this.inspectAmount = new System.Windows.Forms.TextBox();
             this.JOQTY = new System.Windows.Forms.TextBox();
             this.Converter = new System.Windows.Forms.TabPage();
+            this.degrees = new System.Windows.Forms.TextBox();
+            this.minutes = new System.Windows.Forms.TextBox();
+            this.seconds = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.degAnswer = new System.Windows.Forms.TextBox();
+            this.button43 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Calculator.SuspendLayout();
             this.Calculator2.SuspendLayout();
@@ -792,6 +800,14 @@ namespace XanderToolz
             // 
             // ManufacturingCalc
             // 
+            this.ManufacturingCalc.Controls.Add(this.button43);
+            this.ManufacturingCalc.Controls.Add(this.degAnswer);
+            this.ManufacturingCalc.Controls.Add(this.label14);
+            this.ManufacturingCalc.Controls.Add(this.label13);
+            this.ManufacturingCalc.Controls.Add(this.label12);
+            this.ManufacturingCalc.Controls.Add(this.seconds);
+            this.ManufacturingCalc.Controls.Add(this.minutes);
+            this.ManufacturingCalc.Controls.Add(this.degrees);
             this.ManufacturingCalc.Controls.Add(this.label11);
             this.ManufacturingCalc.Controls.Add(this.label9);
             this.ManufacturingCalc.Controls.Add(this.label8);
@@ -895,6 +911,71 @@ namespace XanderToolz
             this.Converter.Text = "Converter";
             this.Converter.UseVisualStyleBackColor = true;
             // 
+            // degrees
+            // 
+            this.degrees.Location = new System.Drawing.Point(26, 204);
+            this.degrees.Name = "degrees";
+            this.degrees.Size = new System.Drawing.Size(100, 23);
+            this.degrees.TabIndex = 13;
+            // 
+            // minutes
+            // 
+            this.minutes.Location = new System.Drawing.Point(132, 204);
+            this.minutes.Name = "minutes";
+            this.minutes.Size = new System.Drawing.Size(100, 23);
+            this.minutes.TabIndex = 14;
+            // 
+            // seconds
+            // 
+            this.seconds.Location = new System.Drawing.Point(238, 204);
+            this.seconds.Name = "seconds";
+            this.seconds.Size = new System.Drawing.Size(100, 23);
+            this.seconds.TabIndex = 15;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(52, 230);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 15);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Deg°";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(151, 230);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 15);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Minutes";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(263, 230);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 15);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Seconds";
+            // 
+            // degAnswer
+            // 
+            this.degAnswer.Location = new System.Drawing.Point(132, 260);
+            this.degAnswer.Name = "degAnswer";
+            this.degAnswer.Size = new System.Drawing.Size(100, 23);
+            this.degAnswer.TabIndex = 19;
+            // 
+            // button43
+            // 
+            this.button43.Location = new System.Drawing.Point(26, 259);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(80, 24);
+            this.button43.TabIndex = 20;
+            this.button43.Text = "Calculate";
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.degCalculation);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -987,6 +1068,14 @@ namespace XanderToolz
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button43;
+        private System.Windows.Forms.TextBox degAnswer;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox seconds;
+        private System.Windows.Forms.TextBox minutes;
+        private System.Windows.Forms.TextBox degrees;
     }
 }
 
