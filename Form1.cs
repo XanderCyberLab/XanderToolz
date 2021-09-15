@@ -264,6 +264,13 @@ namespace XanderToolz
         int jobQty;
         int everyPC;
         int pcCalculate;
+        private void SamplingCalculation()
+        {
+            everyPC = Int32.Parse(inspectAmount.Text);
+            pcCalculate = (jobQty / everyPC);
+            
+            everyxpcs.Text = pcCalculate.ToString();
+        }
         private void finishButton(object sender, EventArgs e)
         {
 
@@ -277,33 +284,25 @@ namespace XanderToolz
             else if(jobQty >= 26 && jobQty <= 280)
             {
                 inspectAmount.Text = "32";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
 
             }
             else if (jobQty >= 281 && jobQty <= 500)
             {
                 inspectAmount.Text = "48";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
 
             }
             else if (jobQty >= 501 && jobQty <= 3200)
             {
                 inspectAmount.Text = "73";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
 
             }
             else  
             {
                 inspectAmount.Text = "86";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
         }
 
@@ -317,51 +316,37 @@ namespace XanderToolz
             else if (jobQty >= 9 && jobQty <= 90)
             {
                 inspectAmount.Text = "8";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 91 && jobQty <= 150)
             {
                 inspectAmount.Text = "12";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 151 && jobQty <= 280)
             {
                 inspectAmount.Text = "19";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 281 && jobQty <= 500)
             {
                 inspectAmount.Text = "21";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 501 && jobQty <= 1200)
             {
                 inspectAmount.Text = "27";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 1201 && jobQty <= 3200)
             {
                 inspectAmount.Text = "35";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else
             {
                 inspectAmount.Text = "46";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
         }
 
@@ -371,65 +356,47 @@ namespace XanderToolz
             if (jobQty < 26)
             {
                 inspectAmount.Text = "3";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 26 && jobQty <= 50)
             {
                 inspectAmount.Text = "5";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 51 && jobQty <= 90)
             {
                 inspectAmount.Text = "6";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 91 && jobQty <= 150)
             {
                 inspectAmount.Text = "7";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 151 && jobQty <= 280)
             {
                 inspectAmount.Text = "10";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 281 && jobQty <= 500)
             {
                 inspectAmount.Text = "11";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 501 && jobQty <= 1200)
             {
                 inspectAmount.Text = "15";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else if (jobQty >= 1201 && jobQty <= 3200)
             {
                 inspectAmount.Text = "18";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
             else
             {
                 inspectAmount.Text = "22";
-                everyPC = Int32.Parse(inspectAmount.Text);
-                pcCalculate = jobQty / everyPC;
-                everyxpcs.Text = pcCalculate.ToString();
+                SamplingCalculation();
             }
         }
 
