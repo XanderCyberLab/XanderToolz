@@ -6,4 +6,10 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="XanderToolzDLL">
+      <HintPath>..\XanderToolzDLL\bin\Debug\net5.0\XanderToolzDLL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

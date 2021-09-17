@@ -24,8 +24,9 @@ namespace XanderToolz
         bool isEqualPerformed2 = false;
         bool isOperatorType = false;
         bool isEqualPerformed = false;
+        int jobQty, everyPC, pcCalculate;
 
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -82,7 +83,7 @@ namespace XanderToolz
         {
             MathEquation();
             DisplayOperation.Text = "";
-            isEqualPerformed = true; 
+            isEqualPerformed = true;
 
             //if (button10.Text == "=")
             //{
@@ -111,7 +112,7 @@ namespace XanderToolz
                     break;
             }
             resultsValue = Double.Parse(resultBox.Text);
-            
+
         }
         private void ClearDisplay(object sender, EventArgs e)
         {
@@ -127,29 +128,29 @@ namespace XanderToolz
             TotalTip.Text = "";
         }
 
-        private void TipCal (object sender, EventArgs e)
+        private void TipCal(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             Tip = button.Text;
             resultsValue = Double.Parse(resultBox.Text);
 
             switch (Tip)
-                {
-                    case "15%":                                      
-                        resultBox.Text = (resultsValue * tip15).ToString();
-                        TotalTip.Text = (resultsValue * totalTip15).ToString(format: "0.##");
+            {
+                case "15%":
+                    resultBox.Text = (resultsValue * tip15).ToString();
+                    TotalTip.Text = (resultsValue * totalTip15).ToString(format: "0.##");
                     break;
-                    case "18%":
-                        resultBox.Text = (resultsValue * tip18).ToString();
-                        TotalTip.Text = (resultsValue * totalTip18).ToString(format: "0.##");
+                case "18%":
+                    resultBox.Text = (resultsValue * tip18).ToString();
+                    TotalTip.Text = (resultsValue * totalTip18).ToString(format: "0.##");
                     break;
-                    case "20%":
-                        resultBox.Text = (resultsValue * tip20).ToString();
-                        TotalTip.Text = (resultsValue * totalTip20).ToString(format: "0.##");
+                case "20%":
+                    resultBox.Text = (resultsValue * tip20).ToString();
+                    TotalTip.Text = (resultsValue * totalTip20).ToString(format: "0.##");
                     break;
-                    default:
-                        break;
-                }
+                default:
+                    break;
+            }
         }
         /// <summary>
         /// Tab 2-Second Calculator
@@ -230,7 +231,7 @@ namespace XanderToolz
             }
             resultsValue2 = Double.Parse(resultBox2.Text);
         }
-            private void TipCal2(object sender, EventArgs e)
+        private void TipCal2(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             Tip2 = button.Text;
@@ -261,27 +262,26 @@ namespace XanderToolz
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
-        int jobQty;
-        int everyPC;
-        int pcCalculate;
+
         private void SamplingCalculation()
         {
             everyPC = Int32.Parse(inspectAmount.Text);
             pcCalculate = (jobQty / everyPC);
+
+            everyxpcs.Text = pcCalculate + "";
             
-            everyxpcs.Text = pcCalculate.ToString();
         }
         private void finishButton(object sender, EventArgs e)
         {
 
 
             jobQty = Int32.Parse(JOQTY.Text);
-            
+
             if (jobQty < 26)
             {
                 inspectAmount.Text = "Inspect All";
             }
-            else if(jobQty >= 26 && jobQty <= 280)
+            else if (jobQty >= 26 && jobQty <= 280)
             {
                 inspectAmount.Text = "32";
                 SamplingCalculation();
@@ -299,7 +299,7 @@ namespace XanderToolz
                 SamplingCalculation();
 
             }
-            else  
+            else
             {
                 inspectAmount.Text = "86";
                 SamplingCalculation();
@@ -400,14 +400,16 @@ namespace XanderToolz
             }
         }
 
-
+    
         private void degCalculation(object sender, EventArgs e)
         {
             double angle = Double.Parse(degrees.Text);
             double angleMinutes = Double.Parse(minutes.Text);
             double angleSeconds = Double.Parse(seconds.Text);
             Double degCalx = angle + (angleMinutes / 60) + (angleSeconds / 3600);
-            degAnswer.Text = degCalx.ToString(format: "0.####");
+            degAnswer.Text = XanderToolzDLL.MathEquations.RemoveLastFour(formatted: degCalx.ToString());
+
+            //degAnswer.Text = degCalx.ToString();
         }
 
     }
