@@ -407,9 +407,8 @@ namespace XanderToolz
             double angleMinutes = Double.Parse(minutes.Text);
             double angleSeconds = Double.Parse(seconds.Text);
             Double degCalx = angle + (angleMinutes / 60) + (angleSeconds / 3600);
-            degAnswer.Text = XanderToolzDLL.MathEquations.RemoveLastFour(formatted: degCalx.ToString());
-
-            //degAnswer.Text = degCalx.ToString();
+            //degAnswer.Text = XanderToolzDLL.MathEquations.RemoveLastFour(formatted: degCalx.ToString());
+            degAnswer.Text = degCalx.ToString();
         }
 
     }
